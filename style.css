@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #ff9678;
+  --color-primary: #41436a;
+  --color-secondary: #f54768;
+
+  --btn-background: #41436a;
+  --btn-background-hover: #f54768;
+
+  --ff-body: 'Roboto', sans-serif;
+  --fc-body: #41436a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* || GENERAL STYLES*/
+body {
+  background: url(./assets/background.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  background-color: var(--bg-color);
+  font-family: var(--ff-body);
+  color: var(--fc-body);
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+span {
+  font-weight: 500;
+  font-size: clamp(4rem, 5rem + 10vw, 12.4rem);
+  line-height: 14.8rem;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* || UTILS */
+.hide{
+  display: none;
+}
+
+.container .sounds .buttonActive{
+  background: var(--btn-background-hover);
+}
+
+/* || SITEWIDE */
+.container {
+  width: min(82rem, 90%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  max-width: 95%;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.controls button svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.sounds {
+  position: absolute;
+  bottom: 0;
+
+  max-width: 95%;
+  margin: 3rem auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sounds button {
+  background: var(--btn-background);
+  border-radius: 2.4rem;
+  filter: drop-shadow(2px 2px 24px rgba(51, 51, 51, 0.4));
+
+  width: 7rem;
+  height: 7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: min(120rem, 90%);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .timer{
+    max-width: 100%;
+  }
+
+  .controls {
+    gap: 4rem;
+  }
+
+  .controls button svg {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .sounds {
+    position: static;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3.2rem;
+  }
+
+  .sounds button{
+    width: 14rem;
+    height: 15rem;
+  }
+
+  .sounds button svg{
+    width: 4.7rem;
+    height: 5.6rem;
+  }
+}
