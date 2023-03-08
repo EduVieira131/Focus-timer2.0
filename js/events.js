@@ -46,37 +46,58 @@ export default function Events(timer, sounds, theme) {
   })
 
   forestButton.addEventListener('click', function () {
-    forestButton.classList.add('buttonActive')
-    sounds.forestAudioPlay()
+    if (forestButton.classList.contains('buttonActive')) {
+      sounds.forestAudio.pause()
+      forestButton.classList.remove('buttonActive')
+    } else {
+      sounds.forestAudioPlay()
+      forestButton.classList.add('buttonActive')
+    }
   })
 
-  forestVolume.addEventListener('change', function() {
+  forestVolume.addEventListener('change', function () {
     sounds.forestAudio.volume = this.value / 100
   })
 
   rainButton.addEventListener('click', function () {
-    rainButton.classList.add('buttonActive')
-    sounds.rainAudioPlay()
+    if (rainButton.classList.contains('buttonActive')) {
+      sounds.rainAudio.pause()
+      rainButton.classList.remove('buttonActive')
+    } else {
+      sounds.rainAudioPlay()
+      rainButton.classList.add('buttonActive')
+    }
   })
-  rainVolume.addEventListener('change', function() {
+
+  rainVolume.addEventListener('change', function () {
     sounds.rainAudio.volume = this.value / 100
   })
 
   coffeButton.addEventListener('click', function () {
-    coffeButton.classList.add('buttonActive')
-    sounds.coffeAudioPlay()
+    if (coffeButton.classList.contains('buttonActive')) {
+      sounds.coffeAudio.pause()
+      coffeButton.classList.remove('buttonActive')
+    } else {
+      sounds.coffeAudioPlay()
+      coffeButton.classList.add('buttonActive')
+    }
   })
 
-  coffeVolume.addEventListener('change', function() {
+  coffeVolume.addEventListener('change', function () {
     sounds.coffeAudio.volume = this.value / 100
   })
 
   bonfireButton.addEventListener('click', function () {
-    bonfireButton.classList.add('buttonActive')
-    sounds.bonfireAudioPlay()
+    if (bonfireButton.classList.contains('buttonActive')) {
+      sounds.bonfireAudio.pause()
+      bonfireButton.classList.remove('buttonActive')
+    } else {
+      sounds.bonfireAudioPlay()
+      bonfireButton.classList.add('buttonActive')
+    }
   })
 
-  bonfireVolume.addEventListener('change', function() {
+  bonfireVolume.addEventListener('change', function () {
     sounds.bonfireAudio.volume = this.value / 100
   })
 

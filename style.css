@@ -54,20 +54,20 @@ button {
   cursor: pointer;
 }
 
-input{
+input {
   -webkit-appearance: none;
-  width: 9rem;
-  height: .6rem;
+  width: 70%;
+  height: 0.4rem;
 
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background: var(--bg-color);
   cursor: pointer;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1rem;
+  height: 1rem;
 
   border-radius: 2rem;
   background: var(--bg-color);
@@ -108,12 +108,12 @@ body.darkTheme {
   fill: var(--color-dark-primary);
 }
 
-.darkTheme input[type="range"]{
+.darkTheme input[type='range'] {
   -webkit-appearance: none;
   background: var(--color-primary);
 }
 
-.darkTheme input[type="range"]::-webkit-slider-thumb {
+.darkTheme input[type='range']::-webkit-slider-thumb {
   background: var(--color-primary);
 }
 
@@ -174,10 +174,10 @@ body.darkTheme {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3.2rem;
+  gap: 1.2rem;
 }
 
-.sounds svg{
+.sounds svg {
   fill: var(--bg-color);
 }
 
@@ -209,11 +209,31 @@ body.darkTheme {
   .sounds button {
     width: 14rem;
     height: 15rem;
+    gap: 3.2rem;
   }
 
   .sounds button svg {
     width: 4.7rem;
     height: 5.6rem;
+  }
+
+  input {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 0.6rem;
+  
+    border-radius: 0.5rem;
+    background: var(--bg-color);
+    cursor: pointer;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+  
+    border-radius: 2rem;
+    background: var(--bg-color);
   }
 
   #theme {
