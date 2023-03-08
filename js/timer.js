@@ -23,6 +23,8 @@ export default function Timer({
       if (isFinished) {
         minutes = 0
         seconds = 0
+        pauseButton.classList.add('hide')
+        playButton.classList.remove('hide')
         return
       }
 
