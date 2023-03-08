@@ -7,6 +7,9 @@ export default function Sounds({
   const buttonPressAudio = new Audio(
     'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true'
   )
+  const endTimerAudio = new Audio(
+    'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'
+  )
   const rainAudio = new Audio('./assets/Chuva.wav')
   const coffeAudio = new Audio('./assets/Cafeteria.wav')
   const forestAudio = new Audio('./assets/Floresta.wav')
@@ -42,6 +45,7 @@ export default function Sounds({
 
   return {
     pressButton,
+    endTimerAudio,
     rainAudioPlay,
     coffeAudioPlay,
     forestAudioPlay,

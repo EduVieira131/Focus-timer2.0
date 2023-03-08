@@ -4,7 +4,8 @@ export default function Timer({
   playButton,
   pauseButton,
   addTime,
-  decreaseTime
+  decreaseTime,
+  endTimerAudio
 }) {
   let timerTimeOut
   let minutes = Number(minutesDisplay.textContent)
@@ -25,11 +26,12 @@ export default function Timer({
         seconds = 0
         pauseButton.classList.add('hide')
         playButton.classList.remove('hide')
+        endTimerAudio.play()
         return
       }
 
       if (seconds == 0) {
-        seconds = 60
+        seconds = 2
         --minutes
       }
       --seconds

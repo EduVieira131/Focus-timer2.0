@@ -21,13 +21,21 @@ import {
   bonfireVolume
 } from './elements.js'
 
+const sounds = Sounds({
+  forestVolume,
+  rainVolume,
+  coffeVolume,
+  bonfireVolume
+})
+
 const timer = Timer({
   minutesDisplay,
   secondsDisplay,
   playButton,
   pauseButton,
   addTimeButton,
-  decreaseTimeButton
+  decreaseTimeButton,
+  endTimerAudio: sounds.endTimerAudio
 })
 
 const theme = Themes({
@@ -37,13 +45,6 @@ const theme = Themes({
   soundsCards,
   lightThemeButton,
   darkThemeButton
-})
-
-const sounds = Sounds({
-  forestVolume,
-  rainVolume,
-  coffeVolume,
-  bonfireVolume
 })
 
 Events(timer, sounds, theme)
