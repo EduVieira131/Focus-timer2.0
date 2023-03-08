@@ -18,9 +18,11 @@ export default function Timer({
 
   function countdown() {
     timerTimeOut = setTimeout(function () {
-      let isFinished = minutes <= 0 && seconds < 0
+      let isFinished = minutes <= 0 && seconds <= 0
 
       if (isFinished) {
+        minutes = 0
+        seconds = 0
         return
       }
 
