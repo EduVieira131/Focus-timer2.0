@@ -33,6 +33,8 @@ export default function Events(timer, sounds, theme) {
   resetButton.addEventListener('click', function () {
     sounds.pressButton()
     timer.reset()
+    pauseButton.classList.add('hide')
+    playButton.classList.remove('hide')
   })
 
   addTimeButton.addEventListener('click', function () {

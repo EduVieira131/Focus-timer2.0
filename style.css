@@ -221,17 +221,17 @@ body.darkTheme {
     -webkit-appearance: none;
     width: 80%;
     height: 0.6rem;
-  
+
     border-radius: 0.5rem;
     background: var(--bg-color);
     cursor: pointer;
   }
-  
+
   input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 1.6rem;
     height: 1.6rem;
-  
+
     border-radius: 2rem;
     background: var(--bg-color);
   }
