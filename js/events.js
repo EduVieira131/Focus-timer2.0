@@ -4,13 +4,14 @@ import {
   resetButton,
   addTimeButton,
   decreaseTimeButton,
+  themeButton,
   forestButton,
   rainButton,
   coffeButton,
   bonfireButton
 } from './elements.js'
 
-export default function Events(timer, Sounds) {
+export default function Events(timer, Sounds, theme) {
   playButton.addEventListener('click', function () {
     Sounds().pressButton()
     timer.countdown()
@@ -58,5 +59,9 @@ export default function Events(timer, Sounds) {
   bonfireButton.addEventListener('click', function () {
     bonfireButton.classList.add('buttonActive')
     Sounds().bonfireAudioPlay()
+  })
+
+  themeButton.addEventListener('click', function () {
+    theme.changeTheme()
   })
 }

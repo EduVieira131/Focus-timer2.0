@@ -4,8 +4,11 @@
   font-size: 62.5%;
 
   --bg-color: #ff9678;
+  --bg-dark-color: #41436a;
   --color-primary: #41436a;
   --color-secondary: #f54768;
+  --color-dark-primary: #ff9678;
+  --color-dark-secondary: #f54768;
 
   --btn-background: #41436a;
   --btn-background-hover: #f54768;
@@ -51,13 +54,46 @@ button {
   cursor: pointer;
 }
 
+svg {
+  fill: var(--color-primary);
+}
+
+#theme {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 2rem;
+}
+
 /* || UTILS */
-.hide{
+.hide {
   display: none;
 }
 
-.container .sounds .buttonActive{
+.container .sounds .buttonActive {
   background: var(--btn-background-hover);
+}
+
+/* Dark theme*/
+body.darkTheme {
+  background-color: var(--bg-dark-color);
+}
+
+.darkTheme {
+  color: var(--color-dark-primary);
+}
+
+.controls.darkTheme svg {
+  fill: var(--color-dark-primary);
+}
+
+.sounds.darkTheme svg {
+  fill: var(--color-primary);
+}
+
+.sounds.darkTheme button {
+  background: var(--color-dark-primary);
 }
 
 /* || SITEWIDE */
@@ -85,11 +121,6 @@ button {
   gap: 2rem;
 }
 
-.controls button svg {
-  width: 4rem;
-  height: 4rem;
-}
-
 .sounds {
   position: absolute;
   bottom: 0;
@@ -115,6 +146,10 @@ button {
   justify-content: center;
 }
 
+.sounds svg{
+  fill: var(--bg-color);
+}
+
 @media (min-width: 800px) {
   .container {
     width: min(120rem, 90%);
@@ -122,17 +157,12 @@ button {
     justify-content: space-between;
   }
 
-  .timer{
+  .timer {
     max-width: 100%;
   }
 
   .controls {
     gap: 4rem;
-  }
-
-  .controls button svg {
-    width: 4.8rem;
-    height: 4.8rem;
   }
 
   .sounds {
@@ -145,13 +175,17 @@ button {
     gap: 3.2rem;
   }
 
-  .sounds button{
+  .sounds button {
     width: 14rem;
     height: 15rem;
   }
 
-  .sounds button svg{
+  .sounds button svg {
     width: 4.7rem;
     height: 5.6rem;
+  }
+
+  #theme {
+    padding: 6.6rem;
   }
 }
