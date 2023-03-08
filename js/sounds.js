@@ -1,4 +1,9 @@
-export default function Sounds() {
+export default function Sounds({
+  forestVolume,
+  rainVolume,
+  coffeVolume,
+  bonfireVolume
+}) {
   const buttonPressAudio = new Audio(
     'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true'
   )
@@ -14,21 +19,25 @@ export default function Sounds() {
   function rainAudioPlay() {
     rainAudio.play()
     rainAudio.loop = true
+    rainAudio.volume = rainVolume.value / 100
   }
 
   function coffeAudioPlay() {
     coffeAudio.play()
     coffeAudio.loop = true
+    coffeAudio.volume = coffeVolume.value / 100
   }
 
   function forestAudioPlay() {
     forestAudio.play()
     forestAudio.loop = true
+    forestAudio.volume = forestVolume.value / 100
   }
 
   function bonfireAudioPlay() {
     bonfireAudio.play()
     bonfireAudio.loop = true
+    bonfireAudio.volume = bonfireVolume.value / 100
   }
 
   return {
@@ -36,6 +45,10 @@ export default function Sounds() {
     rainAudioPlay,
     coffeAudioPlay,
     forestAudioPlay,
-    bonfireAudioPlay
+    bonfireAudioPlay,
+    rainAudio,
+    coffeAudio,
+    forestAudio,
+    bonfireAudio
   }
 }

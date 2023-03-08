@@ -54,6 +54,25 @@ button {
   cursor: pointer;
 }
 
+input{
+  -webkit-appearance: none;
+  width: 9rem;
+  height: .6rem;
+
+  border-radius: .5rem;
+  background: var(--bg-color);
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+
+  border-radius: 2rem;
+  background: var(--bg-color);
+}
+
 svg {
   fill: var(--color-primary);
 }
@@ -63,7 +82,8 @@ svg {
   top: 0;
   right: 0;
 
-  padding: 2rem;
+  margin: 2rem;
+  padding: 1rem;
 }
 
 /* || UTILS */
@@ -86,6 +106,15 @@ body.darkTheme {
 
 .controls.darkTheme svg {
   fill: var(--color-dark-primary);
+}
+
+.darkTheme input[type="range"]{
+  -webkit-appearance: none;
+  background: var(--color-primary);
+}
+
+.darkTheme input[type="range"]::-webkit-slider-thumb {
+  background: var(--color-primary);
 }
 
 .sounds.darkTheme svg {
@@ -142,8 +171,10 @@ body.darkTheme {
   height: 7rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 3.2rem;
 }
 
 .sounds svg{
@@ -186,6 +217,6 @@ body.darkTheme {
   }
 
   #theme {
-    padding: 6.6rem;
+    margin: 6.6rem;
   }
 }

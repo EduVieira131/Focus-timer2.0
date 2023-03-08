@@ -20,6 +20,11 @@ const rainButton = document.querySelector('.rain')
 const coffeButton = document.querySelector('.coffe')
 const bonfireButton = document.querySelector('.bonfire')
 
+const forestVolume = document.querySelector('#forestVolume')
+const rainVolume = document.querySelector('#rainVolume')
+const coffeVolume = document.querySelector('#coffeVolume')
+const bonfireVolume = document.querySelector('#bonfireVolume')
+
 export {
   body,
   span,
@@ -38,5 +43,9 @@ export {
   forestButton,
   rainButton,
   coffeButton,
-  bonfireButton
+  bonfireButton,
+  forestVolume,
+  rainVolume,
+  coffeVolume,
+  bonfireVolume
 }

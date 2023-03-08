@@ -8,57 +8,76 @@ import {
   forestButton,
   rainButton,
   coffeButton,
-  bonfireButton
+  bonfireButton,
+  forestVolume,
+  rainVolume,
+  coffeVolume,
+  bonfireVolume
 } from './elements.js'
 
-export default function Events(timer, Sounds, theme) {
+export default function Events(timer, sounds, theme) {
   playButton.addEventListener('click', function () {
-    Sounds().pressButton()
+    sounds.pressButton()
     timer.countdown()
     pauseButton.classList.remove('hide')
     playButton.classList.add('hide')
   })
 
   pauseButton.addEventListener('click', function () {
-    Sounds().pressButton()
+    sounds.pressButton()
     timer.pause()
     pauseButton.classList.add('hide')
     playButton.classList.remove('hide')
   })
 
   resetButton.addEventListener('click', function () {
-    Sounds().pressButton()
+    sounds.pressButton()
     timer.reset()
   })
 
   addTimeButton.addEventListener('click', function () {
-    Sounds().pressButton()
+    sounds.pressButton()
     timer.addTime()
   })
 
   decreaseTimeButton.addEventListener('click', function () {
-    Sounds().pressButton()
+    sounds.pressButton()
     timer.decreaseTime()
   })
 
   forestButton.addEventListener('click', function () {
     forestButton.classList.add('buttonActive')
-    Sounds().forestAudioPlay()
+    sounds.forestAudioPlay()
+  })
+
+  forestVolume.addEventListener('change', function() {
+    sounds.forestAudio.volume = this.value / 100
   })
 
   rainButton.addEventListener('click', function () {
     rainButton.classList.add('buttonActive')
-    Sounds().rainAudioPlay()
+    sounds.rainAudioPlay()
+  })
+  rainVolume.addEventListener('change', function() {
+    sounds.rainAudio.volume = this.value / 100
   })
 
   coffeButton.addEventListener('click', function () {
     coffeButton.classList.add('buttonActive')
-    Sounds().coffeAudioPlay()
+    sounds.coffeAudioPlay()
+  })
+
+  coffeVolume.addEventListener('change', function() {
+    sounds.coffeAudio.volume = this.value / 100
   })
 
   bonfireButton.addEventListener('click', function () {
     bonfireButton.classList.add('buttonActive')
-    Sounds().bonfireAudioPlay()
+    sounds.bonfireAudioPlay()
+  })
+
+  bonfireVolume.addEventListener('change', function() {
+    sounds.bonfireAudio.volume = this.value / 100
   })
 
   themeButton.addEventListener('click', function () {
